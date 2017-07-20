@@ -6,7 +6,7 @@ LABEL "com.gouvinb.docker-markup"="gouvinb" \
       version="1.0"                         \
       description="A Docker image for markup tools, command Line Interface for markup tools."
 
-RUN sed -i "s/jessie main/jessie main contrib non-free/" /etc/apt/sources.list
+RUN sed -i "s/stretch main/stretch main contrib non-free/" /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y pandoc
 RUN apt-get install -y texlive-full
